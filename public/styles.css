@@ -794,17 +794,46 @@ textarea {
 }
 
 @media (max-width: 780px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    padding: 12px 20px;
+    color: var(--espresso);
+    background: color-mix(in srgb, var(--ivory) 94%, transparent);
+    box-shadow: 0 10px 28px rgba(36, 21, 15, 0.1);
+    backdrop-filter: blur(16px);
+  }
+
+  .brand span {
+    font-size: 2rem;
+  }
+
+  .brand small {
+    font-size: 0.64rem;
+  }
+
   .hero {
-    min-height: 92svh;
-    align-items: end;
-    padding-bottom: 190px;
+    min-height: auto;
+    align-items: start;
+    padding-top: 112px;
+    padding-bottom: 180px;
   }
 
   .floating-tags {
     left: 18px;
     right: 18px;
-    bottom: 74px;
-    grid-template-columns: repeat(2, 1fr);
+    bottom: 42px;
+    width: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .floating-tags span {
+    min-width: 0;
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 0.84rem;
   }
 
   .split-heading,
@@ -838,7 +867,7 @@ textarea {
   }
 
   .mobile-float {
-    display: grid;
+    display: none;
   }
 
   .section {
@@ -848,7 +877,13 @@ textarea {
 
 @media (max-width: 520px) {
   h1 {
-    font-size: clamp(2.75rem, 18vw, 4rem);
+    font-size: clamp(2.65rem, 13vw, 3.45rem);
+    line-height: 1.03;
+  }
+
+  .hero-copy {
+    margin: 18px 0 22px;
+    font-size: 1rem;
   }
 
   .floating-tags {
