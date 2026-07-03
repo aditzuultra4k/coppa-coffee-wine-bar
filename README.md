@@ -42,7 +42,7 @@ STAFF_PASSWORD="parola-ta" npm start
 
 ## Deploy online
 
-Proiectul include si o ruta serverless Vercel in `api/[...path].js`, astfel incat site-ul si backend-ul sa poata fi accesate public impreuna.
+Proiectul include frontend-ul in `public/` si o ruta serverless Vercel in `api/[...path].js`, astfel incat site-ul si backend-ul sa poata fi accesate public impreuna.
 
 ```bash
 npx vercel --prod
